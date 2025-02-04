@@ -59,19 +59,20 @@ def main():
     print(f"The computers hands are {comp_hand1} and {comp_hand2}. Your hands are {player_hand1} and {player_hand2}."
           f"\nNow that you know which hands the computer could play, which one of your hands will you KEEP.")
 
-    player_hand_result = int(input(f"Which hand number will you keep(Enter in the corresponding number), 1 = {player_hand1} and 2 = {player_hand2}: "))
+    player_result = int(input(f"Which hand number will you keep(Enter in the corresponding number), 1 = {player_hand1} and 2 = {player_hand2}: "))
     
-    if player_hand_result == 1:
-        get rid of hand 2
-    elif player_player_result == 2:
-        get rid of hand 1
+    if player_result == 1:
+        player_result = player_hand1
+    elif player_result == 2:
+        player_result = player_hand2
 
 
     comp_result = random.randint(1,2)
     if comp_result == 1:
-        get rid of hand 2
+        comp_result = comp_hand1
     elif comp_result == 2:
-        get rid of hand 1
+        comp_result = comp_hand2
 
+    print(f"Your hand is {player_result} and the compter's hand is {comp_result}.")
 
 main()
